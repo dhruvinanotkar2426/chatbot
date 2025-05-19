@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT Bank - Virtual Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="bank-logo">
+                <img src="https://via.placeholder.com/40" alt="Bank Logo">
+            </div>
+            <h1>MIT Bank Assistant</h1>
+            <div class="chat-close">×</div>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    Hello! Welcome to MIT Bank's virtual assistant. How can I help you today?
+                </div>
+                <div class="quick-replies">
+                    <div class="quick-reply" data-message="Check my balance">Check my balance</div>
+                    <div class="quick-reply" data-message="View my transactions">View transactions</div>
+                    <div class="quick-reply" data-message="Card information">Card information</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <div class="quick-replies-container" id="quick-replies-container">
+                <!-- Floating quick replies will appear here -->
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
+                <button id="send-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
